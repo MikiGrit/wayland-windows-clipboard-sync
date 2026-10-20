@@ -193,7 +193,7 @@ echo "[4/6] Generating ~/start-clip-sync.sh..."
 cat << EOF > "$HOME_DIR/start-clip-sync.sh"
 #!/bin/bash
 cleanup() {
-    pkill -P $$ 2>/dev/null
+    pkill -P \$\$ 2>/dev/null
     exit 0
 }
 trap cleanup INT TERM EXIT
